@@ -1,6 +1,7 @@
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "hardware/timer.h"
+#include "pico/sleep.h"
 
 const uint pirPin = 5;
 const uint ledPin = 15;
@@ -43,7 +44,8 @@ int main() {
   gpio_put(ledPin, LOW);
   
   while(true) {
-    sleep_ms(sleepTime);
+//    sleep_ms(sleepTime);
+    sleep_goto_dormant_until_edge_high(pirPin);
   }
 }
 
