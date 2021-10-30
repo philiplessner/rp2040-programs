@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "rp2040-cmake",
+			"working_dir": "${project_path}/build",
+			"shell_cmd": "export PICO_SDK_PATH='/Users/dpmlto1/Programs/pico/pico-sdk' && cmake .."
+		},
+		{
+			"name": "rp2040-make",
+			"working_dir": "${project_path}/build",
+			"shell_cmd": "make"
+		}
+	]
+}

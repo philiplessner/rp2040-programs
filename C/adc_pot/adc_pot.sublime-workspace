@@ -1,0 +1,2424 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"su",
+				"sub\tTag"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"P",
+				"PATH_DATA\tNone"
+			],
+			[
+				"loa",
+				"load_unclassified_data\tfunction"
+			],
+			[
+				"dat",
+				"datadict"
+			],
+			[
+				"fil",
+				"filenames\tstatement"
+			],
+			[
+				"PAT",
+				"PATH_DATA"
+			],
+			[
+				"si",
+				"silhouettes"
+			],
+			[
+				"sis",
+				"sils"
+			],
+			[
+				"tar",
+				"targetnames"
+			],
+			[
+				"ta",
+				"target_names"
+			],
+			[
+				"tfd",
+				"tfidf_instance"
+			],
+			[
+				"uni",
+				"unicode\tclass"
+			],
+			[
+				"fu",
+				"fulltext_r\tstatement"
+			],
+			[
+				"In",
+				"IndexError\tclass"
+			],
+			[
+				"des",
+				"desc_body\tstatement"
+			],
+			[
+				"ds",
+				"desc_body\tstatement"
+			],
+			[
+				"de",
+				"description\tstatement"
+			],
+			[
+				"abs",
+				"abstract\tstatement"
+			],
+			[
+				"in",
+				"invention-title"
+			],
+			[
+				"is",
+				"isinstance\tfunction"
+			],
+			[
+				"__",
+				"__name__\tclass"
+			],
+			[
+				"bib",
+				"biblio"
+			],
+			[
+				"bi",
+				"biblo_query\tstatement"
+			],
+			[
+				"desc",
+				"desc_query"
+			],
+			[
+				"pred",
+				"predicted_class\tstatement"
+			],
+			[
+				"cate",
+				"category_names\tstatement"
+			],
+			[
+				"cat",
+				"category_names\tstatement"
+			],
+			[
+				"un",
+				"unpickle_withdill\tfunction"
+			],
+			[
+				"categ",
+				"categoryname_filepath\tparam"
+			],
+			[
+				"targ",
+				"targetd\tparam"
+			],
+			[
+				"pate",
+				"patentdict\tparam"
+			],
+			[
+				"targe",
+				"target_names"
+			],
+			[
+				"pic",
+				"pickle_withdill\tfunction"
+			],
+			[
+				"pi",
+				"pickle_withdill\tfunction"
+			],
+			[
+				"fi",
+				"filepath\tstatement"
+			],
+			[
+				"pat",
+				"patentvector_instance\tparam"
+			],
+			[
+				"tf",
+				"tfidf_instance"
+			],
+			[
+				"vec",
+				"vectordict\tstatement"
+			],
+			[
+				"re",
+				"replacement_patterns\tstatement"
+			],
+			[
+				"Tf",
+				"TfidfVectorizer\tclass"
+			],
+			[
+				"PA",
+				"PATH_REPLACE\tstatement"
+			],
+			[
+				"tfid",
+				"tfidf_instance"
+			],
+			[
+				"ve",
+				"vectorfile\tparam"
+			],
+			[
+				"St",
+				"StandardScaler"
+			],
+			[
+				"pr",
+				"preprocessing\tmodule"
+			],
+			[
+				"path",
+				"pathtraining"
+			],
+			[
+				"PATH_",
+				"PATH_SW"
+			],
+			[
+				"PATH",
+				"PATH_REPLACE"
+			],
+			[
+				"st",
+				"stemmed\tstatement"
+			],
+			[
+				"Ra",
+				"RandomForestClassifier"
+			],
+			[
+				"tra",
+				"train_test_split"
+			],
+			[
+				"f1_scor",
+				"f1_scores\tparam"
+			],
+			[
+				"cal",
+				"calculate_roc\tfunction"
+			],
+			[
+				"displa",
+				"display_grid_scores\tfunction"
+			],
+			[
+				"confu",
+				"confusion_matrix"
+			],
+			[
+				"M",
+				"MultinomialNB\timport"
+			],
+			[
+				"Tr",
+				"TruncatedSVD\timport"
+			],
+			[
+				"A",
+				"AttributeError\tclass"
+			],
+			[
+				"to",
+				"toarray"
+			],
+			[
+				"vector",
+				"vectordict"
+			],
+			[
+				"tfi",
+				"tfidf_vectors"
+			],
+			[
+				"cou",
+				"count_vectors"
+			],
+			[
+				"feature",
+				"feature_names"
+			],
+			[
+				"patent",
+				"patentvectorizer\tstatement"
+			],
+			[
+				"roc",
+				"roc_scores\tstatement"
+			],
+			[
+				"target",
+				"target_names"
+			],
+			[
+				"category_",
+				"category_num"
+			],
+			[
+				"ca",
+				"categories\tstatement"
+			],
+			[
+				"max",
+				"matrix\timport"
+			],
+			[
+				"train",
+				"train_score\tstatement"
+			],
+			[
+				"rel",
+				"replacer\tstatement"
+			],
+			[
+				"com",
+				"composed_partials\tstatement"
+			],
+			[
+				"co",
+				"compose_two\tfunction"
+			],
+			[
+				"remo",
+				"remove_stopwords\tfunction"
+			],
+			[
+				"rem",
+				"remove_stopwords"
+			],
+			[
+				"file",
+				"filepath"
+			],
+			[
+				"p",
+				"patentsum\tfunction"
+			],
+			[
+				"sec",
+				"sectdict\tstatement"
+			],
+			[
+				"filtered",
+				"filtered_dict\tstatement"
+			],
+			[
+				"Ma",
+				"MakeSummary"
+			],
+			[
+				"sum",
+				"sumtech\timport"
+			],
+			[
+				"gen",
+				"gen_cat\tfunction"
+			],
+			[
+				"line",
+				"lines_fromfiles\tfunction"
+			],
+			[
+				"filehan",
+				"filehandles\tstatement"
+			],
+			[
+				"sent",
+				"sentence_scores\tparam"
+			],
+			[
+				"se",
+				"sentence_ranked\tstatement"
+			],
+			[
+				"sen",
+				"sentence_scores\tstatement"
+			],
+			[
+				"doc",
+				"document2\tstatement"
+			],
+			[
+				"tops",
+				"tops_ordered\tstatement"
+			],
+			[
+				"sentence",
+				"sentence_scores"
+			],
+			[
+				"ou",
+				"outfile\tstatement"
+			],
+			[
+				"te",
+				"textrank"
+			],
+			[
+				"get",
+				"getparent"
+			],
+			[
+				"patt",
+				"patterns_t"
+			],
+			[
+				"clean",
+				"clean_patent"
+			],
+			[
+				"cle",
+				"cleantext\tstatement"
+			],
+			[
+				"h",
+				"html"
+			],
+			[
+				"fea",
+				"feature_weights\tstatement"
+			],
+			[
+				"Pa",
+				"PassiveAggressiveClassifier\timport"
+			],
+			[
+				"paten",
+				"patentdict\tstatement"
+			],
+			[
+				"cr",
+				"cross_val_score"
+			],
+			[
+				"data",
+				"data_stripped\tstatement"
+			],
+			[
+				"E",
+				"EDOT"
+			],
+			[
+				"low",
+				"lower_case\tfunction"
+			],
+			[
+				"filter",
+				"filtered_titles"
+			],
+			[
+				"section",
+				"section_titles"
+			],
+			[
+				"open",
+				"open_strip\tfunction"
+			],
+			[
+				"cust",
+				"custom_tokenizer\tfunction"
+			],
+			[
+				"tokens",
+				"tokens_w\tparam"
+			],
+			[
+				"s",
+				"split\tfunction"
+			],
+			[
+				"toke",
+				"tokens_w\tparam"
+			],
+			[
+				"e",
+				"ethylenedioxythiophene"
+			],
+			[
+				"filt",
+				"filtered\tstatement"
+			],
+			[
+				"o",
+				"olymer"
+			],
+			[
+				"top",
+				"toptg\tstatement"
+			],
+			[
+				"lo",
+				"lower_case\tfunction"
+			],
+			[
+				"feat",
+				"feature_names\tstatement"
+			],
+			[
+				"Co",
+				"CountVectorizer"
+			],
+			[
+				"prin",
+				"print_function\tstatement"
+			],
+			[
+				"clue",
+				"clue_words\tparam"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "adc_pot.sublime-project",
+			"settings":
+			{
+				"buffer_size": 340,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					72,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move_to",
+								{
+									"register": "\"",
+									"to": "hardeol"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "build_"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "systems"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "[$0]"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\n\t$0\n"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "{$0}"
+								}
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "mam"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "name"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "o"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "Local"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "'$0'"
+								}
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Delete Left Right.sublime-macro"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "'$0'"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n\n"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"move",
+								{
+									"by": "lines",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "lines",
+									"forward": false
+								}
+							],
+							[
+								"move",
+								{
+									"by": "lines",
+									"forward": false
+								}
+							],
+							[
+								"reindent",
+								null
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "working"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "_di"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "r"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "${"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "proje"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "ct"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "_path"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "}"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ":$"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "{folder"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "}"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "}"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "shell"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "_cmd"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "make"
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"iQAAACoAAAAAAAAAKwAAAAAAAAAAAAAAKwAAAAAAAAAsAAAAAAAAAAAAAAAsAAAAAAAAAC0AAAAAAAAAAAAAAC0AAAAAAAAALwAAAAAAAAAAAAAALgAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAMQAAAAAAAAAAAAAAMQAAAAAAAAAyAAAAAAAAAAAAAAAyAAAAAAAAADMAAAAAAAAAAAAAADMAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA1AAAAAAAAAAAAAAA1AAAAAAAAADYAAAAAAAAAAAAAADYAAAAAAAAANwAAAAAAAAAAAAAANwAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADkAAAAAAAAAAAAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA7AAAAAAAAAAAAAAA8AAAAAAAAAD0AAAAAAAAAAAAAAD0AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAQgAAAAAAAAAAAAAAQQAAAAAAAABGAAAAAAAAAAAAAABEAAAAAAAAAEYAAAAAAAAAAAAAAEUAAAAAAAAARgAAAAAAAAAAAAAARgAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEkAAAAAAAAAAAAAAEkAAAAAAAAASwAAAAAAAAAAAAAARgAAAAAAAABGAAAAAAAAAAIAAAAJCUYAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABLAAAAAAAAAAAAAABKAAAAAAAAAEsAAAAAAAAAAAAAAEsAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABNAAAAAAAAAAAAAABMAAAAAAAAAEwAAAAAAAAAAQAAAG1LAAAAAAAAAEsAAAAAAAAAAQAAAGFKAAAAAAAAAEoAAAAAAAAAAQAAAG1KAAAAAAAAAEsAAAAAAAAAAAAAAEsAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABNAAAAAAAAAAAAAABNAAAAAAAAAE4AAAAAAAAAAAAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABRAAAAAAAAAAAAAABRAAAAAAAAAFMAAAAAAAAAAAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUgAAAAAAAABSAAAAAAAAAAEAAABvUgAAAAAAAABTAAAAAAAAAAAAAABTAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAVQAAAAAAAAAAAAAAVQAAAAAAAABWAAAAAAAAAAAAAABWAAAAAAAAAFcAAAAAAAAAAAAAAFgAAAAAAAAAWgAAAAAAAAAAAAAAWAAAAAAAAABYAAAAAAAAAAEAAAAnWAAAAAAAAABYAAAAAAAAAAEAAAAnWAAAAAAAAABaAAAAAAAAAAAAAABZAAAAAAAAAFoAAAAAAAAAAAAAAFoAAAAAAAAAXQAAAAAAAAAAAAAAXgAAAAAAAABeAAAAAAAAAAEAAAAKWgAAAAAAAABaAAAAAAAAAAMAAAAJCQlaAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAXAAAAAAAAAABAAAAJ1sAAAAAAAAAWwAAAAAAAAABAAAACVoAAAAAAAAAWgAAAAAAAAABAAAACVkAAAAAAAAAWQAAAAAAAAABAAAAClgAAAAAAAAAWAAAAAAAAAABAAAAJ1gAAAAAAAAAWQAAAAAAAAAAAAAAWQAAAAAAAABaAAAAAAAAAAAAAABaAAAAAAAAAF0AAAAAAAAAAAAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABhAAAAAAAAAAAAAABaAAAAAAAAAFoAAAAAAAAAAwAAAAkJCV8AAAAAAAAAXwAAAAAAAAABAAAACV4AAAAAAAAAXgAAAAAAAAABAAAACV0AAAAAAAAAXQAAAAAAAAABAAAACVoAAAAAAAAAXQAAAAAAAAAAAAAAXQAAAAAAAABfAAAAAAAAAAAAAABeAAAAAAAAAF8AAAAAAAAAAAAAAF8AAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABhAAAAAAAAAAAAAABhAAAAAAAAAGIAAAAAAAAAAAAAAGIAAAAAAAAAYwAAAAAAAAAAAAAAYwAAAAAAAABkAAAAAAAAAAAAAABkAAAAAAAAAGUAAAAAAAAAAAAAAGUAAAAAAAAAZgAAAAAAAAAAAAAAZgAAAAAAAABnAAAAAAAAAAAAAABnAAAAAAAAAGgAAAAAAAAAAAAAAGgAAAAAAAAAaQAAAAAAAAAAAAAAagAAAAAAAABrAAAAAAAAAAAAAABrAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAbgAAAAAAAAAAAAAAbQAAAAAAAABuAAAAAAAAAAAAAABuAAAAAAAAAG8AAAAAAAAAAAAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAB0AAAAAAAAAHUAAAAAAAAAAAAAAHUAAAAAAAAAdgAAAAAAAAAAAAAAdgAAAAAAAAB3AAAAAAAAAAAAAAB3AAAAAAAAAHgAAAAAAAAAAAAAAHgAAAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAAAB6AAAAAAAAAAAAAAB6AAAAAAAAAHsAAAAAAAAAAAAAAHsAAAAAAAAAfAAAAAAAAAAAAAAAewAAAAAAAAB7AAAAAAAAAAEAAAB9ewAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAAAAAAH0AAAAAAAAAfgAAAAAAAAAAAAAAfgAAAAAAAAB/AAAAAAAAAAAAAAB/AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAgQAAAAAAAAAAAAAAgQAAAAAAAACCAAAAAAAAAAAAAACCAAAAAAAAAIMAAAAAAAAAAAAAAIMAAAAAAAAAhAAAAAAAAAAAAAAAhAAAAAAAAACFAAAAAAAAAAAAAACFAAAAAAAAAIYAAAAAAAAAAAAAAIcAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACJAAAAAAAAAAAAAACJAAAAAAAAAIwAAAAAAAAAAAAAAIwAAAAAAAAAjgAAAAAAAAAAAAAAjQAAAAAAAACOAAAAAAAAAAAAAACOAAAAAAAAAI8AAAAAAAAAAAAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACRAAAAAAAAAAAAAACRAAAAAAAAAJIAAAAAAAAAAAAAAJIAAAAAAAAAkwAAAAAAAAAAAAAAkwAAAAAAAACUAAAAAAAAAAAAAACUAAAAAAAAAJUAAAAAAAAAAAAAAJUAAAAAAAAAlgAAAAAAAAAAAAAAlwAAAAAAAACYAAAAAAAAAAAAAACYAAAAAAAAAJkAAAAAAAAAAAAAAJkAAAAAAAAAmwAAAAAAAAAAAAAAmgAAAAAAAACbAAAAAAAAAAAAAACbAAAAAAAAAJwAAAAAAAAAAAAAAJwAAAAAAAAAnQAAAAAAAAAAAAAAnQAAAAAAAACeAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAACgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					73,
+					1,
+					"trim_trailing_white_space",
+					null,
+					"AQAAAD0AAAAAAAAAPQAAAAAAAAABAAAAIA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAJ0AAAAAAAAAnQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					88,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move_to",
+								{
+									"register": "\"",
+									"to": "hardeol"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Delete Left Right.sublime-macro"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "}"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "/build"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"FAAAAIMAAAAAAAAAgwAAAAAAAAABAAAAfYIAAAAAAAAAggAAAAAAAAABAAAAcoEAAAAAAAAAgQAAAAAAAAABAAAAZYAAAAAAAAAAgAAAAAAAAAABAAAAZH8AAAAAAAAAfwAAAAAAAAABAAAAbH4AAAAAAAAAfgAAAAAAAAABAAAAb30AAAAAAAAAfQAAAAAAAAABAAAAZnwAAAAAAAAAfAAAAAAAAAABAAAAe3wAAAAAAAAAfAAAAAAAAAABAAAAfXsAAAAAAAAAewAAAAAAAAABAAAAJHsAAAAAAAAAfAAAAAAAAAAAAAAAegAAAAAAAAB6AAAAAAAAAAEAAAA6ewAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAAAAAAH0AAAAAAAAAfgAAAAAAAAAAAAAAfgAAAAAAAAB/AAAAAAAAAAAAAAB/AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAgQAAAAAAAAAAAAAAgQAAAAAAAACCAAAAAAAAAAAAAACBAAAAAAAAAIEAAAAAAAAAAQAAADo",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAHMAAAAAAAAAcwAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					93,
+					5,
+					"vi_eval",
+					{
+						"action_args":
+						{
+						},
+						"action_command": "vi_right_delete",
+						"motion_args":
+						{
+						},
+						"motion_clip_to_line": false,
+						"motion_command": null,
+						"motion_inclusive": false,
+						"motion_mode": 0
+					},
+					"BQAAAFEAAAAAAAAAUQAAAAAAAAABAAAATFEAAAAAAAAAUQAAAAAAAAABAAAAb1EAAAAAAAAAUQAAAAAAAAABAAAAY1EAAAAAAAAAUQAAAAAAAAABAAAAYVEAAAAAAAAAUQAAAAAAAAABAAAAbA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAFEAAAAAAAAAUQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					96,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "rp2040"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "-make"
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"CwAAAFEAAAAAAAAAUgAAAAAAAAAAAAAAUgAAAAAAAABTAAAAAAAAAAAAAABTAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAVQAAAAAAAAAAAAAAVQAAAAAAAABWAAAAAAAAAAAAAABWAAAAAAAAAFcAAAAAAAAAAAAAAFcAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABZAAAAAAAAAAAAAABZAAAAAAAAAFoAAAAAAAAAAAAAAFoAAAAAAAAAWwAAAAAAAAAAAAAAWwAAAAAAAABcAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAFEAAAAAAAAAUQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					107,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "{}"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": false
+								}
+							],
+							[
+								"move",
+								{
+									"by": "lines",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"CwAAAEMAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABFAAAAAAAAAAAAAABEAAAAAAAAAEUAAAAAAAAAAAAAAEUAAAAAAAAARwAAAAAAAAAAAAAARwAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEoAAAAAAAAAAAAAAEUAAAAAAAAARQAAAAAAAAACAAAACQlFAAAAAAAAAEgAAAAAAAAAAAAAAEwAAAAAAAAATQAAAAAAAAAAAAAATQAAAAAAAABPAAAAAAAAAAAAAABFAAAAAAAAAEUAAAAAAAAAAwAAAAkJCQ",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAEMAAAAAAAAAQwAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					125,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true,
+									"register": "\""
+								}
+							],
+							[
+								"move",
+								{
+									"by": "lines",
+									"forward": false
+								}
+							],
+							[
+								"reindent",
+								null
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "name"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "rp20"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "40-cmake"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"GAAAAEUAAAAAAAAASAAAAAAAAAAAAAAASAAAAAAAAABKAAAAAAAAAAAAAABJAAAAAAAAAEoAAAAAAAAAAAAAAEoAAAAAAAAASwAAAAAAAAAAAAAASwAAAAAAAABMAAAAAAAAAAAAAABMAAAAAAAAAE0AAAAAAAAAAAAAAE4AAAAAAAAATwAAAAAAAAAAAAAATwAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFIAAAAAAAAAAAAAAFEAAAAAAAAAUgAAAAAAAAAAAAAAUgAAAAAAAABTAAAAAAAAAAAAAABTAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAVQAAAAAAAAAAAAAAVQAAAAAAAABWAAAAAAAAAAAAAABWAAAAAAAAAFcAAAAAAAAAAAAAAFcAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABZAAAAAAAAAAAAAABZAAAAAAAAAFoAAAAAAAAAAAAAAFoAAAAAAAAAWwAAAAAAAAAAAAAAWwAAAAAAAABcAAAAAAAAAAAAAABcAAAAAAAAAF0AAAAAAAAAAAAAAF4AAAAAAAAAXwAAAAAAAAAAAAAAXwAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAGMAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAEUAAAAAAAAARQAAAAAAAAAAAAAAAABEQA"
+				],
+				[
+					130,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move_to",
+								{
+									"register": "\"",
+									"to": "hardeol"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"AwAAAF4AAAAAAAAAXgAAAAAAAAABAAAALl8AAAAAAAAAXwAAAAAAAAADAAAACQkJXgAAAAAAAABfAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAEcAAAAAAAAARwAAAAAAAAAAAAAAAABUQA"
+				],
+				[
+					134,
+					1,
+					"vi_paste_right",
+					null,
+					"AQAAAGAAAAAAAAAAiwAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAEUAAAAAAAAARQAAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					147,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Add Line.sublime-macro",
+									"register": "\""
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "she"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "shell_cmd",
+									"format": "text",
+									"keep_prefix": false,
+									"must_insert": false,
+									"trigger": "shell_cmd"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "cmake"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " .."
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"FAAAAIoAAAAAAAAAiwAAAAAAAAAAAAAAiwAAAAAAAACOAAAAAAAAAAAAAACOAAAAAAAAAJAAAAAAAAAAAAAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACRAAAAAAAAAAAAAACRAAAAAAAAAJIAAAAAAAAAAAAAAI8AAAAAAAAAjwAAAAAAAAADAAAAc2hljwAAAAAAAACYAAAAAAAAAAAAAACZAAAAAAAAAJoAAAAAAAAAAAAAAJoAAAAAAAAAmwAAAAAAAAAAAAAAmwAAAAAAAACdAAAAAAAAAAAAAACcAAAAAAAAAJ0AAAAAAAAAAAAAAJ0AAAAAAAAAngAAAAAAAAAAAAAAngAAAAAAAACfAAAAAAAAAAAAAACfAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAoQAAAAAAAAAAAAAAoQAAAAAAAACiAAAAAAAAAAAAAACiAAAAAAAAAKMAAAAAAAAAAAAAAKMAAAAAAAAApAAAAAAAAAAAAAAApQAAAAAAAACmAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					149,
+					1,
+					"vi_eval",
+					{
+						"action_args":
+						{
+						},
+						"action_command": "vi_delete",
+						"motion_args":
+						{
+							"to": "line"
+						},
+						"motion_clip_to_line": false,
+						"motion_command": "expand_selection",
+						"motion_inclusive": false,
+						"motion_mode": 0
+					},
+					"AQAAAKcAAAAAAAAApwAAAAAAAAABAAAACg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAKcAAAAAAAAApwAAAAAAAAAAAAAAAOB1QA"
+				],
+				[
+					153,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move_to",
+								{
+									"register": "\"",
+									"to": "hardeol"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"AQAAAKUAAAAAAAAApQAAAAAAAAABAAAALA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAIsAAAAAAAAAiwAAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					157,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true,
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"AQAAAKkAAAAAAAAAqgAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAKgAAAAAAAAAqAAAAAAAAAAAAAAAAEB1QA"
+				],
+				[
+					167,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move_to",
+								{
+									"register": "\"",
+									"to": "hardeol"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "\"$0\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "s"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"BwAAAIoAAAAAAAAAiwAAAAAAAAAAAAAAiwAAAAAAAACOAAAAAAAAAAAAAACOAAAAAAAAAJAAAAAAAAAAAAAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAjwAAAAAAAACPAAAAAAAAAAEAAABzjwAAAAAAAACPAAAAAAAAAAEAAAAijgAAAAAAAACOAAAAAAAAAAEAAAAi",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAGIAAAAAAAAAYgAAAAAAAAAAAAAAAIBWQA"
+				],
+				[
+					168,
+					1,
+					"vi_eval",
+					{
+						"action_args":
+						{
+						},
+						"action_command": "vi_delete",
+						"motion_args":
+						{
+							"to": "line"
+						},
+						"motion_clip_to_line": false,
+						"motion_command": "expand_selection",
+						"motion_inclusive": false,
+						"motion_mode": 0
+					},
+					"AQAAAIsAAAAAAAAAiwAAAAAAAAAEAAAACQkJCg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAI0AAAAAAAAAjQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					175,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "export"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "export"
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"EgAAAJoAAAAAAAAAmwAAAAAAAAAAAAAAmwAAAAAAAACcAAAAAAAAAAAAAACcAAAAAAAAAJ0AAAAAAAAAAAAAAJ0AAAAAAAAAngAAAAAAAAAAAAAAngAAAAAAAACfAAAAAAAAAAAAAACfAAAAAAAAAKAAAAAAAAAAAAAAAJ8AAAAAAAAAnwAAAAAAAAABAAAAdJ4AAAAAAAAAngAAAAAAAAABAAAAcp0AAAAAAAAAnQAAAAAAAAABAAAAb5wAAAAAAAAAnAAAAAAAAAABAAAAcJsAAAAAAAAAmwAAAAAAAAABAAAAeJoAAAAAAAAAmgAAAAAAAAABAAAAZZwAAAAAAAAAnQAAAAAAAAAAAAAAnQAAAAAAAACeAAAAAAAAAAAAAACeAAAAAAAAAJ8AAAAAAAAAAAAAAJ8AAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAAChAAAAAAAAAAAAAAChAAAAAAAAAKIAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAJoAAAAAAAAAmgAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					182,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true,
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"paste",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": " &"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "&"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"exit_insert_mode",
+								null
+							]
+						]
+					},
+					"CwAAAKEAAAAAAAAAoQAAAAAAAAABAAAAdKAAAAAAAAAAoAAAAAAAAAABAAAAcp8AAAAAAAAAnwAAAAAAAAABAAAAb54AAAAAAAAAngAAAAAAAAABAAAAcJ0AAAAAAAAAnQAAAAAAAAABAAAAeJwAAAAAAAAAnAAAAAAAAAABAAAAZZwAAAAAAAAA2AAAAAAAAAAAAAAA2AAAAAAAAADZAAAAAAAAAAAAAADZAAAAAAAAANoAAAAAAAAAAAAAANoAAAAAAAAA2wAAAAAAAAAAAAAA2wAAAAAAAADcAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAKEAAAAAAAAAoQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					186,
+					1,
+					"replace_character",
+					{
+						"character": "'"
+					},
+					"AQAAALEAAAAAAAAAsgAAAAAAAAABAAAAIg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAALEAAAAAAAAAsQAAAAAAAAAAAAAAAADwvw"
+				],
+				[
+					190,
+					1,
+					"replace_character",
+					{
+						"character": "'"
+					},
+					"AQAAANcAAAAAAAAA2AAAAAAAAAABAAAAIg",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAANcAAAAAAAAA1wAAAAAAAAAAAAAAAADwvw"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":",
+				":$ - EOF"
+			],
+			[
+				":prev",
+				"MarkdownLivePreview: Open Preview"
+			],
+			[
+				":tab",
+				"Table Editor: Set table syntax 'MultiMarkdown' for current view"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"tutkian e",
+				"Tutkain: Evaluate Innermost Form"
+			],
+			[
+				"tutkian c",
+				"Tutkain: Connect"
+			],
+			[
+				"tutkian ev",
+				"Tutkain: Evaluate Outermost Form"
+			],
+			[
+				"tutkain n",
+				"Tutkain: New Scratch View"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				":mar",
+				"Snippet: Markdown Image"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				":2",
+				"Snippet: Markdown Header 2"
+			],
+			[
+				":s",
+				":w - Save"
+			],
+			[
+				"previe",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"previ",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"prev",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"preview",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"",
+				"Anaconda: Vagrant Reload"
+			],
+			[
+				"preveiw",
+				"MarkdownLivePreview: Edit Current File"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				" select col",
+				"UI: Select Color Scheme"
+			],
+			[
+				"select",
+				"UI: Select Theme"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"table",
+				"Table Editor: Enable for current syntax"
+			],
+			[
+				"rep",
+				"SublimeREPL: Python"
+			],
+			[
+				"pando",
+				"Build: Pandown: LaTeX - PDF"
+			],
+			[
+				"pand",
+				"Build: Pandown: LaTeX - PDF"
+			],
+			[
+				"bre",
+				"Python Breakpoints: Toggle"
+			],
+			[
+				"brea",
+				"Python Breakpoints: Toggle"
+			],
+			[
+				"break",
+				"Python Breakpoints: Toggle"
+			],
+			[
+				"br",
+				"Breakpoints: Toggle"
+			],
+			[
+				"new",
+				"ANF: New File"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"gi",
+				"Git: Status"
+			],
+			[
+				"pep8",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pan",
+				"Build: Pandown: Rich Text (RTF)"
+			],
+			[
+				"pandown",
+				"Build: Pandown: Word Document"
+			]
+		],
+		"width": 676.0
+	},
+	"console":
+	{
+		"height": 154.0,
+		"history":
+		[
+			"view.run_command(\"open_recently_closed_file\")"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/dpmlto1/Programs/pico/C/adc_pot",
+		"/Users/dpmlto1/Programs/pico/C/adc_pot/build"
+	],
+	"file_history":
+	[
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/NT-KEMET/NT-KEMET.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/film roadmap.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Business Case/Alps/Yarn/Pulse/Pulse.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Ceramic Roadmap.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Ce Patent Review.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/john.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/Tantalum/Formation/documents.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/kk.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Electrolytics Roadmap.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/AspenCore/Power Electronics 2021.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Customer/Apple/Apple Share Project/CY20/12_20/Ceramic/Ceramic.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Town Hall/NPD-NPI 2020-10.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/davide.md",
+		"/Users/dpmlto1/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/dpmlto1/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
+		"/Users/dpmlto1/Programs/Clojure/wonderland-clojure-katas/alphabet-cipher/src/alphabet_cipher/coder.clj",
+		"/Users/dpmlto1/OneDrive - KEMET/Patent/invites.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Rich Nass/Podcast 2020-09-21.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Chuck/Chuck.md",
+		"/Users/dpmlto1/Desktop/test.html",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/James.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/KEMET Leaders Forums/2020 Leadership Forum/Action Learning/ALP.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Webinar/spectrum-table.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/Landsdowne Labs/landsdowne.md",
+		"/Users/dpmlto1/Library/Application Support/Sublime Text 3/Packages/Table Editor/README.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Poly-Magic/Poly-Magic.md",
+		"/Users/dpmlto1/Desktop/pb-free_vectorized.svg",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/hcst.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Capacitech Energy/capacitech.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Business Case/Alps/Yarn/CFIUS.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/Smoltek/smoltek.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Apple.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Tantalum Roadmap.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/SPS/Novasentis/novasentis.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/Pyreos/Pyreos.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Bourns/bourns.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/Tantalum/KO Cap/Suzhou Presentation/100Anniversary.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Supplier/ZEON/ZEON.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/NC State/PREES/PRESS.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Skeleton/skeleton.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Patent/Fueling Innovation For Top-Flight R&D.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/KEMET Leaders Forums/2018 Leadership Forum/Action Learning/action-learning.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/KEMET Leaders Forums/2018 Leadership Forum/Elie Ofek/co-creating innovations 2019.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/Global HR/outline.md",
+		"/Users/dpmlto1/OneDrive/ -/ KEMET/Training/Global/ HR/Technology.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/KEMET Leaders Forums/2018 Leadership Forum/Elie Ofek/projects.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Questions for KEMET.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Customer/Bosch/innovation-award.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Blog/Auto Roadmap/auto.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Blog/Profiles/janeye.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Jianghai/jianghai.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/Tantalum/KO Cap/Suzhou Presentation/anniversary-15.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Organization/COE/2018/asia-coe-patent.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Training/KEMET Leaders Forums/2018 Leadership Forum/Ajay Agrawal/Agrawal.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/LT/CY18/08_18/cross-bg.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/LT/CY18/08_18/modules.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/Cornell Dublier/Polymer/markets.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/LT/CY18/08_18/adjacency2.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/ECIA/talk.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Patent/Patent Awards/Newsletter/Americas Newsletter Patents 2018-06.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Patent/Patent Awards/Newsletter/leadless-stacks.png",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Town Hall/05_18/Town Hall Technology 2018-05.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/keko.md",
+		"/Users/dpmlto1/Desktop/keko-report.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Town Hall/05_18/Town Hall Technology 2018-05",
+		"/Users/dpmlto1/OneDrive - KEMET/Partner/SPS/Novasentis/termination-characterization.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/TOKIN/LT Metrics/MSA LT metrics.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/FEBG/Film Technology/resources 2018-04.md",
+		"/Users/dpmlto1/OneDrive - KEMET/BG/TOKIN/MSA LT metrics-1.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Blog/Trends/trends.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/Blog/trends.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/Board of Directors/CY18/03_18/Ceramic/ceramic.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/Board of Directors/CY18/03_18/ceramic.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/Board of Directors/CY18/03_18/MSABG.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Management Meetings/Board of Directors/CY18/03_18/product_expansion.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Customer/Bosch/bosch.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/novasentis.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Competitor/BERYL/beryl.md",
+		"/Users/dpmlto1/Programs/Machine Learning/Patent/intermediate/8925112.xml",
+		"/Users/dpmlto1/Programs/Machine Learning/Patent/ipynb/8925112.xml",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/adjacency2.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/novasentis-dd.md",
+		"/Users/dpmlto1/Programs/Machine Learning/TensorFlow/mnist-softmax.py",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Antonio.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Per.md",
+		"/Users/dpmlto1/Desktop/ipgb20170103_wk01.zip Folder/ipgb20170103.xml",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/yoshi.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Suzhou.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/sublime text 3 license.txt",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/CDE.md",
+		"/Users/dpmlto1/Documents/Competitor/BERYL/beryl.md",
+		"/Users/dpmlto1/OneDrive - KEMET/Marketing/adc.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/parents.md",
+		"/Users/dpmlto1/Documents/BG/Tantalum/Pre Polymerized/Al/Granna/victor.md",
+		"/Users/dpmlto1/Documents/Competitor/Vishay/smd_herm.md",
+		"/Users/dpmlto1/Documents/Supplier/HCStarck/hcstarck.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/ralf.md",
+		"/Users/dpmlto1/Documents/Patent/Thomson Innovation/clustering/code/utils.py",
+		"/Users/dpmlto1/Programs/Machine Learning/Patent/replacements.json",
+		"/Users/dpmlto1/Programs/Machine Learning/Patent/topics_tfidf.txt",
+		"/Users/dpmlto1/Dropbox/Pythonista/ipg161011.xml",
+		"/Users/dpmlto1/Documents/Supplier/Borealis/borealis.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/capchem.md",
+		"/Users/dpmlto1/Documents/Competitor/BLD/bld.md",
+		"/Users/dpmlto1/Documents/Organization/COE/2016/Asia.md",
+		"/Users/dpmlto1/Documents/Management Mtgs/LT/CY16/08_16/Trends/trends.md",
+		"/Users/dpmlto1/Documents/Management Mtgs/LT/CY16/08_16/trends.md",
+		"/Users/dpmlto1/Dropbox/Python/recommendations.py",
+		"/Users/dpmlto1/Dropbox/Pythonista/patent_query_fields.txt",
+		"/Users/dpmlto1/Dropbox/Pythonista/patent_query_table.txt",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/iav_audi.md",
+		"/Users/dpmlto1/Documents/Partner/Chinuka/chinuka.md",
+		"/Users/dpmlto1/.profile",
+		"/Users/dpmlto1/Documents/Misc/KEMET DNS.txt",
+		"/Users/dpmlto1/Documents/Misc/bartender1-license.txt",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/metalysis.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Anomalous Charging.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Yuri.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Chris.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/nvidia.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Linear Technology.md",
+		"/Users/dpmlto1/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/dpmlto1/Documents/BG/Tantalum/KO Cap/Auto/auto.md",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/Aiying/Aiying.md",
+		"/Users/dpmlto1/Documents/Supplier/Steiner/steiner.md",
+		"/Users/dpmlto1/.jupyter/jupyter_notebook_config.py",
+		"/Users/dpmlto1/.ipython/profile_default/ipython_notebook_config.py",
+		"/Users/dpmlto1/Dropbox/Apps/Editorial/mst.md"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "adc_pot.sublime-project",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								215,
+								215
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										228,
+										229
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										155,
+										156
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.autopep8":
+	{
+		"height": 27.0
+	},
+	"output.exec":
+	{
+		"height": 122.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 27.0
+	},
+	"pinned_build_system": "rp2040-make",
+	"project": "adc_pot.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 325.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}
