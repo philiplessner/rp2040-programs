@@ -1,3 +1,6 @@
+/* Use a photoresistor to detect when it is dark and a proximity sensor to detect when a person is present. LED will only go on when person is present and it is dark.
+ */
+
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "hardware/timer.h"
@@ -14,17 +17,14 @@ const bool LOW = false;
 
 void pir_interrupt(uint gpio, uint32_t events) {
   const uint16_t lightLevelThreshold = 300;
-  const uint32_t interval = 2000;
+  const uint32_t timeOn = 3000; // Time the LED stays on in ms
   gpio_set_irq_enabled(pirPin, EDGE_RISE, false);
   uint16_t lightLevel = adc_read();
   if (lightLevel < lightLevelThreshold) {
       gpio_put(ledPin, HIGH);
-      absolute_time_t currentTime = get_absolute_time();
-      absolute_time_t timeOff = make_timeout_time_ms(interval);
-      int64_t timeDiff = absolute_time_diff_us(currentTime, timeOff);
-      while (timeDiff > 0) {
-        currentTime = get_absolute_time();
-        timeDiff = absolute_time_diff_us(currentTime, timeOff);
+      absolute_time_t timeOff = make_timeout_time_ms(timeOn); // Absolute time that the LED goes off
+      while(!time_reached(timeOff)) {
+          tight_loop_contents();
       }
       gpio_put(ledPin, LOW);
       }
@@ -44,7 +44,6 @@ int main() {
   gpio_put(ledPin, LOW);
   
   while(true) {
-//    sleep_ms(sleepTime);
     sleep_goto_dormant_until_edge_high(pirPin);
   }
 }
