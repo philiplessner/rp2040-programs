@@ -44,7 +44,7 @@ int main() {
   gpio_put(ledPin, LOW);
   
   while(true) {
-      tight_loop_contents();
+      sleep_ms(sleepTime);
   }
 }
 
