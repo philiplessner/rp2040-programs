@@ -44,7 +44,7 @@ int main() {
   gpio_put(ledPin, LOW);
   
   while(true) {
-      sleep_ms(sleepTime);
+      sleep_goto_dormant_until_edge_high(pirPin);
   }
 }
 
