@@ -76,8 +76,16 @@ void measure_freqs(void) {
     // Can't measure clk_ref / xosc as it is the ref
 }
 
+void adc_setup(uint adc_channel) {
+    int adc_gpio[3] = {26, 27, 28};
+    adc_init();
+    // Make sure GPIO is high-impedance, no pullups etc
+    adc_gpio_init(adc_gpio[adc_channel]);
+    // Select which channel to read
+    adc_select_input(adc_channel);
+}
+
 int main() {
-    const uint LED_PIN = 25;
     const uint ADC_GPIO = 27;
     const uint ADC_INPUT = 1;
 
@@ -89,11 +97,7 @@ int main() {
     uint clock0_orig = clocks_hw->sleep_en0;
     uint clock1_orig = clocks_hw->sleep_en1;
 
-    adc_init();
-    // Make sure GPIO is high-impedance, no pullups etc
-    adc_gpio_init(ADC_GPIO);
-    // Select ADC input 1 (GPIO27)
-    adc_select_input(ADC_INPUT);
+    adc_setup(ADC_INPUT);
     // Take initial ADC Reading
     // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
     const float conversion_factor = 3.3f / (1 << 12);
@@ -128,8 +132,8 @@ int main() {
         sleep_run_from_xosc();
         //Reset real time clock to a value
         rtc_set_datetime(&t);
-        //sleep here, in this case for 1 min
-        rtc_sleep(46,0);
+        //sleep here, in this case for 15 seconds 
+        rtc_sleep(45,15);
 
         //will return here and awake should be true
         while (!awake) {
@@ -150,11 +154,7 @@ int main() {
         measure_freqs();
         uart_default_tx_wait_blocking();
 
-        adc_init();
-        // Make sure GPIO is high-impedance, no pullups etc
-        adc_gpio_init(ADC_GPIO);
-        // Select ADC input 1 (GPIO27)
-        adc_select_input(ADC_INPUT);
+        adc_setup(ADC_INPUT);
         // Take ADC Reading
         // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
         const float conversion_factor = 3.3f / (1 << 12);
