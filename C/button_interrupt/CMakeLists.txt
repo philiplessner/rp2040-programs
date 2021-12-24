@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 
 # Include build functions from Pico SDK
 include(pico_sdk_import.cmake)
+include(pico_extras_import.cmake)
 # Also need to include PICO EXTRAS
 # include(pico_extras_import.cmake)
 
@@ -22,7 +23,7 @@ add_executable(${PROJECT_NAME}
 pico_enable_stdio_usb(${PROJECT_NAME} 0)
 pico_enable_stdio_uart(${PROJECT_NAME} 1)
 # Pull in our pico_stdlib which pulls in commonly used features
-target_link_libraries(${PROJECT_NAME} pico_stdlib)
+target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_sleep)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(${PROJECT_NAME})
