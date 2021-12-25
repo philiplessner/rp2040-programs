@@ -9,7 +9,6 @@
 #include "hardware/structs/scb.h"
 #include "hardware/adc.h"
 
-const uint buttonPin = 17;
 const uint32_t EDGE_FALL = 0x4;
 const uint32_t EDGE_RISE = 0x8;
 const bool OUTPUT = true;
@@ -68,10 +67,14 @@ void adc_setup(uint adc_channel) {
 int main() {
     const uint ADC_GPIO = 28;
     const uint ADC_INPUT = 2;
+    const uint buttonPin = 17;
+    const uint ledPin = 12;
 
     gpio_init(buttonPin); 
     gpio_set_dir(buttonPin, GPIO_IN);
     gpio_pull_up(buttonPin);
+    gpio_init(ledPin);
+    gpio_set_dir(ledPin, GPIO_OUT);
     stdio_init_all();
     //save values for later
     uint scb_orig = scb_hw->scr;
@@ -104,7 +107,9 @@ int main() {
       printf("****ADC Reading****\n");
       printf("Raw value: 0x%03x, voltage: %f V\n\n", result, result * conversion_factor);
       uart_default_tx_wait_blocking();
-      sleep_ms(20);
+      gpio_put(ledPin, HIGH);
+      sleep_ms(1000);
+      gpio_put(ledPin, LOW);
   }
 }
 
