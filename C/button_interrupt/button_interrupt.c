@@ -83,10 +83,10 @@ int main() {
     adc_setup(ADC_INPUT);
     printf("Frequencies before sleep\n");
     measure_freqs();
-    uart_default_tx_wait_blocking();
   
   while(true) {
       printf("Running from XOSC\n");
+      uart_default_tx_wait_blocking();
       sleep_run_from_xosc();
       printf("Going to Sleep\n");
       uart_default_tx_wait_blocking();
@@ -98,7 +98,6 @@ int main() {
      //clocks should be restored
       printf("****Clocks after reset****\n");
       measure_freqs();
-      uart_default_tx_wait_blocking();
       adc_setup(ADC_INPUT);
       // Take ADC Reading
       // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
@@ -108,7 +107,7 @@ int main() {
       printf("Raw value: 0x%03x, voltage: %f V\n\n", result, result * conversion_factor);
       uart_default_tx_wait_blocking();
       gpio_put(ledPin, HIGH);
-      sleep_ms(1000);
+      sleep_ms(10000);
       gpio_put(ledPin, LOW);
   }
 }
