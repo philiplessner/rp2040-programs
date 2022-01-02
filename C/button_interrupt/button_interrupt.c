@@ -87,37 +87,36 @@ int main() {
     uint clock1_orig = clocks_hw->sleep_en1;
     gpio_put(adcTurnOnPin, HIGH);
     adc_setup(ADC_INPUT);
-    printf("Frequencies before sleep\n");
-    measure_freqs();
+ //   printf("Frequencies before sleep\n");
+ //   measure_freqs();
   
   while(true) {
-      printf("Running from XOSC\n");
-      uart_default_tx_wait_blocking();
+//      printf("Running from XOSC\n");
+//      uart_default_tx_wait_blocking();
       sleep_run_from_xosc();
-      printf("Going to Sleep\n");
-      uart_default_tx_wait_blocking();
+//     printf("Going to Sleep\n");
+//      uart_default_tx_wait_blocking();
       sleep_goto_dormant_until_pin(buttonPin, true, false);
-      printf("Button Pressed\n");
-      printf("****Clocks After Sleep****\n");
-      measure_freqs();
+//      printf("Button Pressed\n");
+//      printf("****Clocks After Sleep****\n");
+//      measure_freqs();
       recover_from_sleep(scb_orig, clock0_orig, clock1_orig);
      //clocks should be restored
-      printf("****Clocks after reset****\n");
-      measure_freqs();
+//      printf("****Clocks after reset****\n");
+//      measure_freqs();
       gpio_put(adcTurnOnPin, HIGH);
       adc_setup(ADC_INPUT);
       // Take ADC Reading
       // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
       uint16_t result = adc_read();
-      printf("****ADC Reading****\n");
-      printf("Raw value: %d, voltage: %f V\n\n", result, result * conversion_factor);
-      uart_default_tx_wait_blocking();
+//      printf("****ADC Reading****\n");
+//      printf("Raw value: %d, voltage: %f V\n\n", result, result * conversion_factor);
+//      uart_default_tx_wait_blocking();
       gpio_put(adcTurnOnPin, LOW);
       if (result < lightLevelThreshold) {
           gpio_put(ledPin, HIGH);
           sleep_ms(10000);
           gpio_put(ledPin, LOW);
-      
      }
     }
 }
