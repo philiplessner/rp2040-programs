@@ -69,17 +69,23 @@ int main() {
     const uint ADC_INPUT = 2;
     const uint buttonPin = 17;
     const uint ledPin = 12;
+    const uint adcTurnOnPin = 16;
+    const uint16_t lightLevelThreshold = 300;
+    const float conversion_factor = 3.3f / (1 << 12);
 
     gpio_init(buttonPin); 
     gpio_set_dir(buttonPin, GPIO_IN);
     gpio_pull_up(buttonPin);
     gpio_init(ledPin);
     gpio_set_dir(ledPin, GPIO_OUT);
+    gpio_init(adcTurnOnPin);
+    gpio_set_dir(adcTurnOnPin, GPIO_OUT);
     stdio_init_all();
     //save values for later
     uint scb_orig = scb_hw->scr;
     uint clock0_orig = clocks_hw->sleep_en0;
     uint clock1_orig = clocks_hw->sleep_en1;
+    gpio_put(adcTurnOnPin, HIGH);
     adc_setup(ADC_INPUT);
     printf("Frequencies before sleep\n");
     measure_freqs();
@@ -98,17 +104,20 @@ int main() {
      //clocks should be restored
       printf("****Clocks after reset****\n");
       measure_freqs();
+      gpio_put(adcTurnOnPin, HIGH);
       adc_setup(ADC_INPUT);
       // Take ADC Reading
       // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
-      const float conversion_factor = 3.3f / (1 << 12);
       uint16_t result = adc_read();
       printf("****ADC Reading****\n");
-      printf("Raw value: 0x%03x, voltage: %f V\n\n", result, result * conversion_factor);
+      printf("Raw value: %d, voltage: %f V\n\n", result, result * conversion_factor);
       uart_default_tx_wait_blocking();
-      gpio_put(ledPin, HIGH);
-      sleep_ms(10000);
-      gpio_put(ledPin, LOW);
-  }
+      gpio_put(adcTurnOnPin, LOW);
+      if (result < lightLevelThreshold) {
+          gpio_put(ledPin, HIGH);
+          sleep_ms(10000);
+          gpio_put(ledPin, LOW);
+      
+     }
+    }
 }
-
