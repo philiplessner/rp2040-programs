@@ -69,7 +69,7 @@ int main() {
     const uint ADC_INPUT = 2;
     const uint buttonPin = 17;
     const uint ledPin = 12;
-    const uint adcTurnOnPin = 16;
+    const uint adcTurnOnPin = 2;
     const uint16_t lightLevelThreshold = 300;
     const float conversion_factor = 3.3f / (1 << 12);
 
