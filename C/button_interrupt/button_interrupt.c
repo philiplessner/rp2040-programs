@@ -72,6 +72,7 @@ int main() {
     const uint adcTurnOnPin = 2;
     const uint16_t lightLevelThreshold = 300;
     const float conversion_factor = 3.3f / (1 << 12);
+    const uint16_t ledOnTime = 30000;
 
     gpio_init(buttonPin); 
     gpio_set_dir(buttonPin, GPIO_IN);
@@ -115,7 +116,7 @@ int main() {
       gpio_put(adcTurnOnPin, LOW);
       if (result < lightLevelThreshold) {
           gpio_put(ledPin, HIGH);
-          sleep_ms(10000);
+          sleep_ms(ledOnTime);
           gpio_put(ledPin, LOW);
      }
     }
