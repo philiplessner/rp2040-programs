@@ -1,5 +1,5 @@
 # Set minimum required version of CMake
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.13)
 
 # Include build functions from Pico SDK
 include(pico_sdk_import.cmake)
