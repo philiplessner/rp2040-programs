@@ -1,30 +1,30 @@
-// Blink an external LED
-#include "pico/stdlib.h"
+// Blink 3 external LEDs using timer interrupt
 
-const uint LEDRed = 8;
-const uint LEDYellow = 9;
-const uint LEDGreen = 10;
+#include "pico/stdlib.h"
+#define LEDRed 8
+#define LEDYellow 9
+#define LEDGreen 10
+
+static const uint32_t mask = 1U << LEDRed | 1U << LEDYellow | 1U << LEDGreen;
 
 bool repeating_timer_callback(struct repeating_timer *t){
     static uint32_t count;
+    uint32_t vmask;
 
     count++;
 
     switch (count){
         case 1:
-            gpio_put(LEDRed, 1);
-            gpio_put(LEDYellow, 0);
-            gpio_put(LEDGreen, 0);
+            vmask = 1U << LEDRed;
+            gpio_put_masked(mask, vmask);
             break;
         case 2:
-            gpio_put(LEDRed, 0);
-            gpio_put(LEDYellow, 1);
-            gpio_put(LEDGreen, 0);
+            vmask = 1U << LEDYellow;
+            gpio_put_masked(mask, vmask);
             break;
         case 3:
-            gpio_put(LEDRed, 0);
-            gpio_put(LEDYellow, 0);
-            gpio_put(LEDGreen, 1);
+            vmask = 1U << LEDGreen;
+            gpio_put_masked(mask, vmask);
             break;
         default:
             count = 0;
@@ -33,7 +33,6 @@ bool repeating_timer_callback(struct repeating_timer *t){
 }
 
 int main() {
-    const uint32_t mask = 1U<<LEDRed | 1U<<LEDYellow | 1U<<LEDGreen;
     const uint32_t delay = 500;
     gpio_init_mask(mask);
     gpio_set_dir_out_masked(mask);
