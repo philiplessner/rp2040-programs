@@ -25,9 +25,8 @@ bool repeating_timer_callback(struct repeating_timer *t){
         case 3:
             vmask = 1U << LEDGreen;
             gpio_put_masked(mask, vmask);
-            break;
-        default:
             count = 0;
+            break;
     }
     return true;
 }
