@@ -9,27 +9,28 @@
 #define LEDGreen 10
 #define LEDBlue 11
 
+typedef enum {RED, YELLOW, GREEN} Color;
 static const uint32_t mask = 1U << LEDRed | 1U << LEDYellow | 1U << LEDGreen;
 
 bool repeating_timer_callback(struct repeating_timer *t){
-    static uint32_t count;
     uint32_t vmask;
+    static Color LEDColor;
 
-    count++;
-
-    switch (count){
-        case 1:
+    switch (LEDColor){
+        case RED:
             vmask = 1U << LEDRed;
             gpio_put_masked(mask, vmask);
+            LEDColor = YELLOW;
             break;
-        case 2:
+        case YELLOW:
             vmask = 1U << LEDYellow;
             gpio_put_masked(mask, vmask);
+            LEDColor = GREEN;
             break;
-        case 3:
+        case GREEN:
             vmask = 1U << LEDGreen;
             gpio_put_masked(mask, vmask);
-            count = 0;
+            LEDColor = RED;
             break;
     }
     return true;
