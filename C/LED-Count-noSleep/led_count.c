@@ -6,7 +6,7 @@ Pressing button resets to 0
 #include "pico/stdlib.h"
 #include "binarycount.h"
 
-volatile bool interrupt_flag = false;
+volatile bool button_interrupt_flag = false;
 
 int main() {
   
@@ -14,7 +14,7 @@ int main() {
   count_t myCount = {0,
                    0,
                    0,
-                   1000};
+                   1000}; //Delay time is 1000ms
 
   
   for (uint32_t i = LED_PIN_MIN; i < LED_PIN_MAX+1; i++) {
@@ -32,11 +32,11 @@ int main() {
   while (true) {
     currentTime = get_absolute_time();
 
-    if (interrupt_flag) {
+    if (button_interrupt_flag) {
       currentTime = get_absolute_time();
       reset(&myCount);
-      interrupt_flag = false;
-      gpio_set_irq_enabled_with_callback(RESET_BUTTON, GPIO_IRQ_EDGE_FALL, true, (gpio_irq_callback_t) &button_interrupt_callback);
+      button_interrupt_flag = false;
+      gpio_set_irq_enabled(RESET_BUTTON, GPIO_IRQ_EDGE_FALL, true);
     }
 
     if (currentTime >= myCount.tToggle) {
@@ -69,5 +69,5 @@ void reset(count_t *myCount) {
 
 gpio_irq_callback_t button_interrupt_callback(uint gpio, uint32_t events) {
   gpio_set_irq_enabled(gpio, events, false);
-  interrupt_flag = true;
+  button_interrupt_flag = true;
 }
