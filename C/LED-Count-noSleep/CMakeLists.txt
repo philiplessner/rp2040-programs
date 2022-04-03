@@ -12,9 +12,13 @@ set(CMAKE_CXX_STANDARD 17)
 # Creates a pico-sdk subdirectory in our project for the libraries
 pico_sdk_init()
 
+# Tell CMake where to find project include files
+include_directories(include)
+
 # Tell CMake where to find the executable source file
 add_executable(${PROJECT_NAME}
         led_count.c
+        include/binarycount.h
         )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 0)
