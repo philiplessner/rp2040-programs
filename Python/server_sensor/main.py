@@ -5,6 +5,7 @@ import machine
 import urequests as requests
 import time
 import socket
+from mysecrets import get_credentials
 
 
 # Set up for internal temperature sensor
@@ -29,9 +30,7 @@ print('mac = ' + mac)
 # print(wlan.config('txpower'))
 
 # Load login data from different file for safety reasons
-ssid = "ATT5Mwb2RC"
-pw = "8ieu2x4gd7ae"
-
+ssid, pw = get_credentials()
 wlan.connect(ssid, pw)
 
 # Wait for connection with 10 second timeout
