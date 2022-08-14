@@ -76,6 +76,9 @@ def get_html(html_name):
 addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
 
 s = socket.socket()
+# Enable the same IP address to be used after a reset so Pico W
+# doesn't need full power down
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(addr)
 s.listen(1)
 
@@ -95,9 +98,7 @@ while True:
         response = get_html("./index.html")
         reading = sensor_temp.read_u16() * conversion_factor
         temperature = 27.0 - (reading - 0.706)/0.001721
-        Temperature = "{:.1f}\u00B0C".format(temperature)
-        print(Temperature)
-        response = response.replace('temperature', Temperature)
+        response = response.format(temperature)
         
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
         cl.send(response)

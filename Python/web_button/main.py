@@ -44,6 +44,9 @@ else:
 ipAddress = status[0]
 addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
 s = socket.socket()
+# Enable the same IP address to be used after a reset so Pico W
+# doesn't need full power down
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(addr)
 s.listen(1)
 while True:
