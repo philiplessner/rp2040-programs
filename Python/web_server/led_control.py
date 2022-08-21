@@ -2,14 +2,15 @@ import network
 import socket
 import time
 from machine import Pin
+from mysecrets import get_credentials
+
 
 led = Pin("LED", Pin.OUT)
 
-ssid = "ATT5Mwb2RC"
-password = "8ieu2x4gd7ae"
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
+ssid, password = get_credentials()
 wlan.connect(ssid, password)
 
 html = """<!DOCTYPE html>

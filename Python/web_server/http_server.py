@@ -1,9 +1,10 @@
 import network
 import socket
 import time
+from mysecrets import get_credentials
 
-ssid = "ATT5Mwb2RC"
-password = "8ieu2x4gd7ae"
+
+ssid, password = get_credentials()
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)

@@ -1,12 +1,12 @@
 import time
 import network
 import ubinascii
+from mysecrets import get_credentials
 
-ssid = "ATT5Mwb2RC"
-password = "8ieu2x4gd7ae"
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
+ssid, password = get_credentials()
 wlan.connect(ssid, password)
 
 # Wait for connect or fail
