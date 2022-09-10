@@ -1,6 +1,7 @@
 import socket
 import time
 import uasyncio as asyncio
+from heartbeat import heartbeat
 
 
 class AsyncHTTPServer():
@@ -19,6 +20,7 @@ class AsyncHTTPServer():
             try:
                 data = await asyncio.wait_for(reader.readline(), self.timeout)
             except asyncio.TimeoutError:
+                print("Reader Timed Out!")
                 data = b''
             if data == b'':
                 raise OSError
@@ -66,9 +68,9 @@ class AsyncHTTPServer():
 
 
     async def serve_client(self, reader, writer):
-        print("***Client Connected***")
-        await self.get_header(reader)
         addr = writer.get_extra_info('peername')
+        print(f"***Client Connected*** from: {addr}")
+        await self.get_header(reader)
         print(f"Received:\n {self.header}\nfrom {addr}")
         if (self.request_verb() == 'GET'):
             filename = self.get_filename()
@@ -78,11 +80,11 @@ class AsyncHTTPServer():
 
     async def main(self):
         print("Setting Up Webserver")
+        asyncio.create_task(heartbeat(500))
         self.server = await asyncio.start_server(self.serve_client, self.host, self.port, backlog=self.backlog)
-        #addrs = ', '.join(str(sock.getsockname()) for sock in self.server.sockets)
-        #print(f'Serving on {addrs}\n')
         while True:
-            await asyncio.sleep(5)
+            print("In Loop Listening...")
+            await asyncio.sleep(60)
 
 
     async def close(self):
