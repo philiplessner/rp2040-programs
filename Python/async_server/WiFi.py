@@ -1,23 +1,24 @@
 import network
 import ubinascii
+import time
 from mysecrets import get_credentials
 
 
 class WiFi():
-    
+
     def __init__(self, type=network.STA_IF,
                  country='US', power_save=False):
         self.type = type
         self.country = country
         self.power_save = power_save
-            
+
     def setup(self):
         self.wlan = network.WLAN(self.type)
         self.wlan.active(True)
         if not self.power_save:
             # If you need to disable powersaving mode
-            self.wlan.config(pm = 0xa11140)
-        
+            self.wlan.config(pm=0xa11140)
+
     def connect(self):
         # Load login data from different file for safety reasons
         ssid, pw = get_credentials()
@@ -30,7 +31,7 @@ class WiFi():
             timeout -= 1
             print('Waiting for connection...')
             time.sleep(1)
-    
+
         # Handle connection error
         # Error meanings
         # 0  Link Down
@@ -45,12 +46,18 @@ class WiFi():
         else:
             status = self.wlan.ifconfig()
             print('ip = ' + status[0])
-            
-    def info(self):
+
+    def macaddress(self):
         # See the MAC address in the wireless chip OTP
-        mac = ubinascii.hexlify(network.WLAN().config('mac'),':').decode()
+        mac = ubinascii.hexlify(network.WLAN().config('mac'), ':').decode()
         print('mac = ' + mac)
-        # Other things to query
-        # print(wlan.config('channel'))
-        # print(wlan.config('essid'))UTC_OFFSET = -4 * 60 * 60
-        # print(wlan.config('txpower'))
+
+    def essid(self):
+        print(self.wlan.config('essid'))
+
+    def channel(self):
+        print(self.wlan.config('channel'))
+
+    def txpower(self):
+        print(self.wlan.config('txpower'))
+
