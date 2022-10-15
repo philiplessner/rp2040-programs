@@ -60,7 +60,6 @@ class AsyncHTTPServer():
             self.logger.info(f"Response Header: {' '.join(response.splitlines())}")
 
         writer.write(response.encode('utf-8'))
-        #print("\nWrote:\n", response)
         await writer.drain()
         writer.close()
         await writer.wait_closed()
@@ -82,10 +81,12 @@ class AsyncHTTPServer():
                 self.logger.info(f"Wrote: {filename}")
                 await self.get_request(filename, writer)
         except asyncio.TimeoutError:
-            response = 'HTTP/1.0 500 Internal Server Error\r\n\r\n'
+            response_header = 'HTTP/1.0 500 Internal Server Error\r\n\r\n'
+            self.logger.info(f"Response Header: {' '.join(response_header.splitlines())}")
+            with open("500.html", "r") as f:
+                content = f.read()
+            response = response_header + content 
             writer.write(response.encode('utf-8'))
-            self.logger.info(f"Wrote: {response}")
-            #print("\nWrote:\n", response)
             await writer.drain()
             writer.close()
             await writer.wait_closed()
@@ -96,7 +97,6 @@ class AsyncHTTPServer():
         asyncio.create_task(heartbeat(500))
         self.server = await asyncio.start_server(self.serve_client, self.host, self.port, backlog=self.backlog)
         while True:
-            #print("In Loop Listening...")
             await asyncio.sleep(60)
 
     def get_local_time(self):
