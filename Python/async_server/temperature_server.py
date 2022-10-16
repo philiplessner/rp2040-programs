@@ -24,7 +24,7 @@ class TimeServer(AsyncHTTPServer):
        ]
         utc = tc.UtcTime()
         loc = tc.LocalTime(tz)
-        current_time = f"{tc.Readable(loc)}"
+        current_time = f"{tc.Readable(utc)}"
         print("Current Date/Time: ", current_time)
         reading = self.sensor_temp.read_u16() * self.conversion_factor
         temperature = 27.0 - (reading - 0.706)/0.001721
