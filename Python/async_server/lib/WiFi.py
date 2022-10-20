@@ -2,6 +2,7 @@ import network
 import ubinascii
 import time
 from mysecrets import get_credentials
+import logging
 
 
 class WiFi():
@@ -11,6 +12,12 @@ class WiFi():
         self.type = type
         self.country = country
         self.power_save = power_save
+        # Configure the logger
+        self.logger = logging.getLogger("WiFi")
+        fmt = "%(asctime)s:%(name)s:%(levelname)s:%(message)s"
+        logging.basicConfig(level=logging.INFO,
+                            filename="server.log",
+                            format=fmt)
 
     def setup(self):
         self.wlan = network.WLAN(self.type)
@@ -23,6 +30,7 @@ class WiFi():
         # Load login data from different file for safety reasons
         ssid, pw = get_credentials()
         self.wlan.connect(ssid, pw)
+        self.logger.info("Connecting to WiFi")
         # Wait for connection with 10 second timeout
         timeout = 10
         while timeout > 0:
@@ -44,20 +52,21 @@ class WiFi():
         if self.wlan.status() != 3:
             raise RuntimeError('Wi-Fi connection failed')
         else:
-            status = self.wlan.ifconfig()
-            print('ip = ' + status[0])
+            ip, subnet, gateway, dns = self.wlan.ifconfig()
+            print(f"ip: {ip}")
+            self.logger.info(f"Connected to Network {self.wlan.config('essid')} from ip {ip}")
 
     def macaddress(self):
         # See the MAC address in the wireless chip OTP
         mac = ubinascii.hexlify(network.WLAN().config('mac'), ':').decode()
-        print('mac = ' + mac)
+        print(f"MAC: {mac}")
 
     def essid(self):
-        print(self.wlan.config('essid'))
+        print(f"Network: {self.wlan.config('essid')}")
 
     def channel(self):
-        print(self.wlan.config('channel'))
+        print(f"Channel: {self.wlan.config('channel')}")
 
     def txpower(self):
-        print(self.wlan.config('txpower'))
+        print(f"TXPower: {self.wlan.config('txpower')}")
 

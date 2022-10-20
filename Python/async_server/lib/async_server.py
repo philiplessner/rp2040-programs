@@ -29,7 +29,7 @@ class AsyncHTTPServer():
         print("Real Time Clock: {0}-{1}-{2} {4}:{5}:{6}".format(*rtc.datetime()))
         # Configure the logger
         self.logger = logging.getLogger("Server")
-        fmt = "%(asctime)s:%(levelname)s: %(message)s"
+        fmt = "%(asctime)s:%(name)s:%(levelname)s:%(message)s"
         logging.basicConfig(level=logging.INFO,
                             filename="server.log",
                             format=fmt)
@@ -59,14 +59,6 @@ class AsyncHTTPServer():
         return custom
 
     async def get_request(self, endpoint, writer):
-
-        #if endpoint == '/':
-       #     filename = './index.html'
-       # elif endpoint == '/log':
-       #     filename = './server.log'
-      #  else:
-       #     filename = ''
-
         try:
             if endpoint == '/':
                 filename = './index.html'
@@ -110,19 +102,19 @@ class AsyncHTTPServer():
         await writer.drain()
         writer.close()
         await writer.wait_closed()
-        self.logger.info("Client Disconnected")
+        self.logger.info(f"Client Disconnected from {self.addr}")
 
 
     async def serve_client(self, reader, writer):
-        addr = writer.get_extra_info('peername')
-        self.logger.info(f"Client Connected from: {addr}")
+        self.addr = writer.get_extra_info('peername')
+        self.logger.info(f"Client Connected from: {self.addr}")
         try:
             request_line = await asyncio.wait_for(reader.readline(),
                                                   self.timeout)
             while (await reader.readline() != b'\r\n'):
                pass
             self.header = request_line.decode('utf-8')
-            self.logger.info(f"Received: {' '.join(self.header.splitlines())} from {addr}")
+            self.logger.info(f"Received: {' '.join(self.header.splitlines())} from {self.addr}")
             if (self.request_verb() == 'GET'):
                 endpoint = self.get_endpoint()
                 self.logger.info(f"Wrote: {endpoint}")
@@ -137,7 +129,8 @@ class AsyncHTTPServer():
             await writer.drain()
             writer.close()
             await writer.wait_closed()
-            self.logger.info("Client Disconnected")
+            self.logger.info(f"Client Disconnected from {self.addr}")
+            
     async def main(self):
         self.logger.info("Setting Up Webserver")
         asyncio.create_task(heartbeat(500))
@@ -168,6 +161,7 @@ class AsyncHTTPServer():
         try:
             asyncio.run(self.main())
         finally:
+            self.logger.info("Came to finally clause")
             asyncio.run(self.close())
             _ = asyncio.new_event_loop()
 
