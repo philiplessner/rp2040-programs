@@ -10,7 +10,7 @@ import time_convert as tc
 
 class AsyncHTTPServer():
 
-    def __init__(self, host="0.0.0.0", port=80, backlog=5, timeout=20):
+    def __init__(self, host="0.0.0.0", port=80, backlog=20, timeout=20):
         tz = [ [         -5, 0, 0],  # Time offset  [      H,M,S] -5 US/Eastern 
            [  3, 13, 1, 0, 0],  # Start of DST [ M,D, H,M,S] Mar 13
            [ 11, 6, 2, 0, 0],  # End   of DST [ M,D, H,M,S] Nov 6
@@ -72,7 +72,7 @@ class AsyncHTTPServer():
                 filename = './server.log'
                 content = ''
                 with open(filename, 'r') as f:
-                    raws = f.readlines()[-20:]
+                    raws = f.readlines()[-25:]
                 content = '<br>'.join([raw.strip() for raw in raws])
                 response_header = 'HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n'
                 prefix = '''
@@ -84,7 +84,7 @@ class AsyncHTTPServer():
                             </head>
                             <body>
                             <div>
-                            <h1>Last N Lines of Log (Max =20)</h1>
+                            <h1>Last N Lines of Log (Max: 25)</h1>
                          '''
                 suffix = '''
                             </div>
@@ -134,7 +134,10 @@ class AsyncHTTPServer():
     async def main(self):
         self.logger.info("Setting Up Webserver")
         asyncio.create_task(heartbeat(500))
-        self.server = await asyncio.start_server(self.serve_client, self.host, self.port, backlog=self.backlog)
+        self.server = await asyncio.start_server(self.serve_client,
+                                                 self.host,
+                                                 self.port,
+                                                 backlog=self.backlog)
         while True:
             await asyncio.sleep(60)
 
@@ -161,8 +164,9 @@ class AsyncHTTPServer():
         try:
             asyncio.run(self.main())
         finally:
-            self.logger.info("Came to finally clause")
+            self.logger.info("Closing Server")
             asyncio.run(self.close())
+            self.logger.info("Server Closed")
             _ = asyncio.new_event_loop()
 
 
