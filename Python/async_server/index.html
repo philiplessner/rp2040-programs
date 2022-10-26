@@ -3,12 +3,18 @@
     <head>
         <meta charset='utf-8'>
         <title>Async</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
     <body>
-        <div>
-        <h1>Hello World!</h1>
-        <p>{0}</p>
-        <p>Temperature {1:.1f}&#x00B0;C</p>
+        <div class="container">
+        <h1>Pico W Server</h1>
+        <p>Local Datetime {0}</p>
+        <p>Reporting Readings from BME280 Sensor</p>
+        <ul class="list-unstyled">
+            <li>Temperature {1:.1f}&#x00B0;C</li>
+            <li>RH {2:.0f}%</li>
+            <li>Pressure {3:.2f}hPa</li>
+         </ul>
         </div>
     </body>
 </html>

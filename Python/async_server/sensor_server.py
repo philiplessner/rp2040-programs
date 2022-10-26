@@ -5,6 +5,7 @@ from WiFi import WiFi
 from async_server import AsyncHTTPServer
 from ntp import set_time
 import time_convert as tc
+import bme280
 
       
 class SensorServer(AsyncHTTPServer):
@@ -12,8 +13,11 @@ class SensorServer(AsyncHTTPServer):
     def __init__(self, host="0.0.0.0", port=80, backlog=5, timeout=20):
         super().__init__(host="0.0.0.0", port=80, backlog=5, timeout=20)
         # Set up for internal temperature sensor
-        self.sensor_temp = machine.ADC(4)
-        self.conversion_factor = 3.3 / 65535
+        # self.sensor_temp = machine.ADC(4)
+        # self.conversion_factor = 3.3 / 65535
+        # Set up bme280 sensor
+        i2c = machine.I2C(0, scl=machine.Pin(1), sda=machine.Pin(0))
+        self.bme = bme280.BME280(i2c=i2c, address=0x76)
         
 
     def customize_html(self, content):
@@ -26,9 +30,13 @@ class SensorServer(AsyncHTTPServer):
         loc = tc.LocalTime(tz)
         current_time = f"{tc.Readable(utc)}"
         print("Current Date/Time: ", current_time)
-        reading = self.sensor_temp.read_u16() * self.conversion_factor
-        temperature = 27.0 - (reading - 0.706)/0.001721
-        custom = content.format(current_time, temperature)
+        #reading = self.sensor_temp.read_u16() * self.conversion_factor
+        #temperature = 27.0 - (reading - 0.706)/0.001721
+        t, p, h = self.bme.read_compensated_data()
+        temperature = t / 100.
+        pressure = p / (256. *100.)
+        RH = h / 1024.
+        custom = content.format(current_time, temperature, RH, pressure)
         return custom
 
 
