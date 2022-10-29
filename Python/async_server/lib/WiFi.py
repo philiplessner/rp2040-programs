@@ -55,6 +55,7 @@ class WiFi():
             ip, subnet, gateway, dns = self.wlan.ifconfig()
             print(f"ip: {ip}")
             self.logger.info(f"Connected to Network {self.wlan.config('essid')} from ip {ip}")
+            return ip
 
     def macaddress(self):
         # See the MAC address in the wireless chip OTP
@@ -63,10 +64,16 @@ class WiFi():
 
     def essid(self):
         print(f"Network: {self.wlan.config('essid')}")
+        return self.wlan.config('essid')
 
     def channel(self):
         print(f"Channel: {self.wlan.config('channel')}")
 
     def txpower(self):
         print(f"TXPower: {self.wlan.config('txpower')}")
+
+if __name__ == "__main__":
+    wifi = WiFi()
+    wifi.setup()
+    wifi.connect()
 

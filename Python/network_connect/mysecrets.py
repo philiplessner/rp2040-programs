@@ -1,7 +1,7 @@
 def get_credentials():
     secrets = {
-    'ssid': 'your ssid here',
-    'pw': 'your password here'
+                'ssid': 'ssid',
+                'pw': 'password'
             }
     return secrets['ssid'], secrets['pw']
 
