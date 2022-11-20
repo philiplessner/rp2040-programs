@@ -4,29 +4,19 @@ from machine import RTC
 import uasyncio as asyncio
 import logging
 from heartbeat import heartbeat
-from ntp import set_time
-import time_convert as tc
+from worldtimeapi import get_local_time
 
 
 class AsyncHTTPServer():
 
     def __init__(self, host="0.0.0.0", port=80, backlog=20, timeout=20):
-        tz = [ [         -5, 0, 0],  # Time offset  [      H,M,S] -5 US/Eastern 
-           [  3, 13, 1, 0, 0],  # Start of DST [ M,D, H,M,S] Mar 13
-           [ 11, 6, 2, 0, 0],  # End   of DST [ M,D, H,M,S] Nov 6
-           [         1, 0, 0]  # DST Adjust   [      H,M,S] +1 hour
-       ]
         self.host = host
         self.port = port
         self.backlog = backlog
         self.timeout = timeout
-        # Set up the real time clock from the NTP server
-        rtc = RTC()
-        set_time()  # Write the UTC time from NTP server to the real time clock
-        # Convert to local timezone
-        year, month, day, hour, minute, second, dow, doy = tc.LocalTime(tz)
-        rtc.datetime((year, month, day, dow, hour, minute, second, 0))
-        print("Real Time Clock: {0}-{1}-{2} {4}:{5}:{6}".format(*rtc.datetime()))
+        # Set the RTC clock from the Internet
+        self.rtc = RTC()
+        self.set_RTC_Time()
         # Configure the logger
         self.logger = logging.getLogger("Server")
         fmt = "%(asctime)s:%(name)s:%(levelname)s:%(message)s"
@@ -130,7 +120,21 @@ class AsyncHTTPServer():
             writer.close()
             await writer.wait_closed()
             self.logger.info(f"Client Disconnected from {self.addr}")
-            
+  
+    def set_RTC_Time(self):
+        # Set up the real time clock from the World Time API server
+        year, month, day, hour, minute, second, dow, doy = get_local_time()
+        self.rtc.datetime((year, month, day, dow, hour, minute, second, 0))
+        print("Local Real Time Clock: {0}-{1}-{2} {4}:{5}:{6}".format(*(self.rtc.datetime())))
+    
+    def get_RTC_Time(self):
+        t = self.rtc.datetime()
+        s = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][t[3]]
+        s += " {:04}-{:02}-{:02}".format(t[0], t[1], t[2])
+        s += " {:02}:{:02}:{:02}".format(t[4], t[5], t[6])
+        return s
+        
+        
     async def main(self):
         self.logger.info("Setting Up Webserver")
         asyncio.create_task(heartbeat(500))
@@ -140,19 +144,6 @@ class AsyncHTTPServer():
                                                  backlog=self.backlog)
         while True:
             await asyncio.sleep(60)
-
-    def get_local_time(self):
-        tz = [ [         -5, 0, 0],  # Time offset  [      H,M,S] -5 US/Eastern 
-           [  3, 13, 1, 0, 0],  # Start of DST [ M,D, H,M,S] Mar 13
-           [ 11, 6, 2, 0, 0],  # End   of DST [ M,D, H,M,S] Nov 6
-           [         1, 0, 0]  # DST Adjust   [      H,M,S] +1 hour
-       ]
-        utc = tc.UtcTime()
-        loc = tc.LocalTime(tz)
-        current_time = f"{tc.Readable(loc)}"
-        self.logging.info(f"Current Date/Time: {current_time}")
-        return current_time
-
 
     async def close(self):
         self.logger.info("Closing Server")
