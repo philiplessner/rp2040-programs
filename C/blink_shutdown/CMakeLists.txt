@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.13)
 include(pico_sdk_import.cmake)
 
 # Set name of project (as PROJECT_NAME) and C/C++ standards
-project (temperature_internal C CXX ASM)
+project (blink_shutdown C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
@@ -14,7 +14,7 @@ pico_sdk_init()
 
 # Tell CMake where to find the executable source file
 add_executable(${PROJECT_NAME}
-         temperature_internal.c
+         blink_shutdown.c
         )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 0)
