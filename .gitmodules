@@ -1,3 +1,6 @@
 [submodule "Python/Python/microdot"]
 	path = Python/Python/microdot
 	url = https://github.com/miguelgrinberg/microdot
+[submodule "Python/microdot"]
+	path = Python/microdot
+	url = https://github.com/miguelgrinberg/microdot
