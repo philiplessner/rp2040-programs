@@ -15,10 +15,10 @@ void adc_setup(uint adc_channel) {
 int main() {
     const uint CTRL_PIN = 16;
     const uint extLED_PIN = 12;
-    const uint ADC_GPIO = 28;
     const uint ADC_INPUT = 2;
+    const uint ADC_TIME = 1;
     const uint16_t lightLevelThreshold = 900;
-    const uint16_t ledOnTime = 10000;
+    uint16_t ledOnTime = 10000;
 
     // Send a high signal to the enable pin of the power supply
     gpio_init(CTRL_PIN);
@@ -33,10 +33,17 @@ int main() {
     adc_setup(ADC_INPUT);
     sleep_ms(500); // Let the ADC stabilize
 
-    // Take ADC Reading
+    // Take Light Sensor Reading
     // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
     uint16_t result = adc_read();
-    printf("ADC Reading= %d\n", result);
+    printf("Light Sensor= %d\n", result);
+
+    // Get setpoint for light on
+    adc_setup(ADC_TIME);
+    uint16_t rawtime = adc_read();
+    printf("Time Adjustment = %d\n", rawtime);
+    ledOnTime = (uint16_t)(22.5 * (double)rawtime + 10000.);
+    printf("ledOnTime = %d\n",ledOnTime);
     
     if (result < lightLevelThreshold) {
         gpio_put(extLED_PIN, 1);
