@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "Philip Lessner",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-ky-040",
+      "id": "encoder1",
+      "top": 34.85,
+      "left": 187.49,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -74.92,
+      "left": 118.29,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 221.6,
+      "left": -11.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "pico:ADC_VREF", "red", [ "h-30.49", "v84.61" ] ],
+    [ "pot1:GND", "pico:GND.7", "black", [ "h-22.52", "v122.31" ] ],
+    [ "pot1:SIG", "pico:GP28", "green", [ "h-35.8", "v102.57" ] ],
+    [ "lcd1:SDA", "pico:GP4", "purple", [ "h-56.87", "v-212.31" ] ],
+    [ "lcd1:SCL", "pico:GP5", "gray", [ "h-19.14", "v-208.97" ] ],
+    [ "lcd1:GND", "pico:GND.4", "black", [ "h-9.5", "v-77.71" ] ],
+    [ "lcd1:VCC", "pico:3V3", "red", [ "h-31.98", "v-48.68", "h141.28", "v-158.14" ] ],
+    [ "encoder1:CLK", "pico:GP16", "purple", [ "v64.86", "h-3.14" ] ],
+    [ "encoder1:DT", "pico:GP17", "gray", [ "v56.01", "h-11.35" ] ],
+    [ "encoder1:VCC", "pico:3V3", "red", [ "v34.26", "h-145.44", "v-114.34" ] ],
+    [ "encoder1:GND", "pico:GND.8", "black", [ "v20.58", "h-121.75", "v-119.98" ] ],
+    [ "encoder1:SW", "pico:GP18", "#8f4814", [ "v38.72", "h-0.53" ] ]
+  ],
+  "dependencies": {}
+}

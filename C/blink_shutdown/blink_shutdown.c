@@ -17,7 +17,7 @@ int main() {
     const uint extLED_PIN = 12;
     const uint ADC_INPUT = 2;
     const uint ADC_TIME = 1;
-    const uint16_t lightLevelThreshold = 900;
+    const uint16_t lightLevelThreshold = 600;
     uint16_t ledOnTime = 10000;
 
     // Send a high signal to the enable pin of the power supply
