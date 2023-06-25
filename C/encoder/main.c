@@ -30,6 +30,7 @@ const char msg[4][20] = {
                            "Exit Setup"
                           };
 
+void rotaryInit(const uint, const uint, const uint);
 void handleEncoder(State*);
 void handleLEDOnTime();
 void handleLEDIntensity();
@@ -43,23 +44,7 @@ int main() {
   const uint sw = 18;
 
   stdio_init_all();
-  gpio_init(clk);
-  gpio_init(dt);
-  gpio_init(sw);
-  gpio_set_dir(clk, INPUT);
-  gpio_set_dir(dt, INPUT);
-  gpio_set_dir(sw, INPUT);
-  gpio_pull_up(sw);
-  gpio_pull_up(clk);
-  gpio_pull_up(dt);
-  gpio_set_irq_enabled_with_callback(clk,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
-  gpio_set_irq_enabled_with_callback(dt,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
+  rotaryInit(clk, dt, sw);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);
@@ -94,6 +79,26 @@ int main() {
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }
   }
+}
+
+void rotaryInit(const uint clk, const uint dt, const uint sw) {
+  gpio_init(clk);
+  gpio_init(dt);
+  gpio_init(sw);
+  gpio_set_dir(clk, INPUT);
+  gpio_set_dir(dt, INPUT);
+  gpio_set_dir(sw, INPUT);
+  gpio_pull_up(sw);
+  gpio_pull_up(clk);
+  gpio_pull_up(dt);
+  gpio_set_irq_enabled_with_callback(clk,
+                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                     true,
+                                     &rotary);
+  gpio_set_irq_enabled_with_callback(dt,
+                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                     true,
+                                     &rotary);
 }
 
 void handleLEDOnTime() {
@@ -142,7 +147,8 @@ void handleEncoder(State* rotaryState) {
 
   if (rotaryState->rotationValue == 1) direction = CW;
   else if (rotaryState->rotationValue == -1) direction = CCW;
-  else direction = 0;
+  else
+    direction = 0;
   rotaryState->state = rotaryStateTable.newState[rotaryState->state][direction];
   rotaryStateTable.fun_ptr[rotaryState->state]();
 }
