@@ -6,9 +6,6 @@
 #include "./rotaryencoder.h"
 #include "./lcd.h"
 
-#define ENCODER_CLK 16
-#define ENCODER_DT  17
-#define ENCODER_SW  18
 #define INPUT       0
 #define LOW         0
 #define HIGH        1
@@ -17,7 +14,7 @@
 #define CW          1
 #define CCW         2
 
-extern volatile bool rotaryEncoder;
+extern volatile bool rotaryFlag;
 
 const uint32_t TIME_READ = 1000;
 const uint32_t BAUD_RATE = 100000;
@@ -92,7 +89,7 @@ int main() {
       readTime = make_timeout_time_ms(TIME_READ);
     }
     // Get the movement of the rotary encoder
-    if (rotaryEncoder) {
+    if (rotaryFlag) {
       rotaryState.rotationValue = checkRotaryEncoder(clk, dt);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }

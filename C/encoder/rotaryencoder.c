@@ -2,18 +2,18 @@
 #include "./rotaryencoder.h"
 
 // Flag from interrupt routine (moved=true)
-volatile bool rotaryEncoder = false;
+volatile bool rotaryFlag = false;
 
 // Interrupt routine just sets a flag when rotation is detected
-void rotary() {
-    rotaryEncoder = true;
+void rotary(uint gpio, uint32_t event_mask) {
+    rotaryFlag = true;
 }
 
 // Rotary encoder has moved (interrupt tells us) but what happened?
 // See https://www.pinteric.com/rotary.html
 int8_t checkRotaryEncoder(uint clk, uint dt) {
     // Reset the flag that brought us here (from ISR)
-    rotaryEncoder = false;
+    rotaryFlag = false;
 
     static uint8_t lrmem = 3;
     static int lrsum = 0;
