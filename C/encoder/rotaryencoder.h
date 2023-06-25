@@ -8,7 +8,7 @@ typedef struct {
     uint sw;
 } RotaryEncoder;
 
-void rotaryInit(RotaryEncoder*);
+void rotaryInit(RotaryEncoder* const, uint, uint, uint);
 void rotary(uint, uint32_t);
-int8_t checkRotaryEncoder(RotaryEncoder*);
+int8_t checkRotaryEncoder(RotaryEncoder* const);
 #endif  // ROTARYENCODER_H_

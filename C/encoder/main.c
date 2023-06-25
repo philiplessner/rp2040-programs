@@ -6,7 +6,9 @@
 #include "./rotaryencoder.h"
 #include "./lcd.h"
 
-#define INPUT       0
+#define ROTARY_CLK  16
+#define ROTARY_DT   17
+#define ROTARY_SW   18
 #define LOW         0
 #define HIGH        1
 #define POT_PIN     28
@@ -39,12 +41,10 @@ void handleExitSetup();
 
 int main() {
   State rotaryState = {0, 0, 0};
-  RotaryEncoder encoder = {.clk = 16,
-                            .dt = 17,
-                            .sw = 18};
+  RotaryEncoder encoder;
 
   stdio_init_all();
-  rotaryInit(&encoder);
+  rotaryInit(&encoder, ROTARY_CLK, ROTARY_DT, ROTARY_SW);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);

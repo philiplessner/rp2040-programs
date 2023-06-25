@@ -4,24 +4,27 @@
 // Flag from interrupt routine (moved=true)
 volatile bool rotaryFlag = false;
 
-void rotaryInit(RotaryEncoder* me) {
-  gpio_init(me->clk);
-  gpio_init(me->dt);
-  gpio_init(me->sw);
-  gpio_set_dir(me->clk, false);
-  gpio_set_dir(me->dt, false);
-  gpio_set_dir(me->sw, false);
-  gpio_pull_up(me->sw);
-  gpio_pull_up(me->clk);
-  gpio_pull_up(me->dt);
-  gpio_set_irq_enabled_with_callback(me->clk,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
-  gpio_set_irq_enabled_with_callback(me->dt,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
+void rotaryInit(RotaryEncoder* const me, uint clk, uint dt, uint sw) {
+    me->clk = clk;
+    me->dt = dt;
+    me->sw = sw;
+    gpio_init(me->clk);
+    gpio_init(me->dt);
+    gpio_init(me->sw);
+    gpio_set_dir(me->clk, false);
+    gpio_set_dir(me->dt, false);
+    gpio_set_dir(me->sw, false);
+    gpio_pull_up(me->sw);
+    gpio_pull_up(me->clk);
+    gpio_pull_up(me->dt);
+    gpio_set_irq_enabled_with_callback(me->clk,
+                                        GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                        true,
+                                        &rotary);
+    gpio_set_irq_enabled_with_callback(me->dt,
+                                        GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                        true,
+                                        &rotary);
 }
 
 // Interrupt routine just sets a flag when rotation is detected
@@ -31,7 +34,7 @@ void rotary(uint gpio, uint32_t event_mask) {
 
 // Rotary encoder has moved (interrupt tells us) but what happened?
 // See https://www.pinteric.com/rotary.html
-int8_t checkRotaryEncoder(RotaryEncoder* me) {
+int8_t checkRotaryEncoder(RotaryEncoder* const me) {
     // Reset the flag that brought us here (from ISR)
     rotaryFlag = false;
 
