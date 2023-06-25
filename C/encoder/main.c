@@ -3,7 +3,8 @@
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "hardware/i2c.h"
-#include "lcd.h"
+#include "./rotaryencoder.h"
+#include "./lcd.h"
 
 #define ENCODER_CLK 16
 #define ENCODER_DT  17
@@ -16,9 +17,10 @@
 #define CW          1
 #define CCW         2
 
+extern volatile bool rotaryEncoder;
+
 const uint32_t TIME_READ = 1000;
 const uint32_t BAUD_RATE = 100000;
-extern volatile bool rotaryEncoder;
 typedef struct {
     int32_t state;
     int8_t  rotationValue;
@@ -32,8 +34,6 @@ const char msg[4][20] = {
                           };
 
 void handleEncoder(State*);
-void rotary();
-int8_t checkRotaryEncoder();
 void handleLEDOnTime();
 void handleLEDIntensity();
 void handleLightThreshold();
@@ -41,20 +41,28 @@ void handleExitSetup();
 
 int main() {
   State rotaryState = {0, 0, 0};
+  const uint clk = 16;
+  const uint dt = 17;
+  const uint sw = 18;
 
   stdio_init_all();
-  // Encoder Setup
-  gpio_init(ENCODER_CLK);
-  gpio_init(ENCODER_DT);
-  gpio_init(ENCODER_SW);
-  gpio_set_dir(ENCODER_CLK, INPUT);
-  gpio_set_dir(ENCODER_DT, INPUT);
-  gpio_set_dir(ENCODER_SW, INPUT);
-  gpio_pull_up(ENCODER_SW);
-  gpio_pull_up(ENCODER_CLK);
-  gpio_pull_up(ENCODER_DT);
-  gpio_set_irq_enabled_with_callback(ENCODER_CLK, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &rotary);
-  gpio_set_irq_enabled_with_callback(ENCODER_DT, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &rotary);
+  gpio_init(clk);
+  gpio_init(dt);
+  gpio_init(sw);
+  gpio_set_dir(clk, INPUT);
+  gpio_set_dir(dt, INPUT);
+  gpio_set_dir(sw, INPUT);
+  gpio_pull_up(sw);
+  gpio_pull_up(clk);
+  gpio_pull_up(dt);
+  gpio_set_irq_enabled_with_callback(clk,
+                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                     true,
+                                     &rotary);
+  gpio_set_irq_enabled_with_callback(dt,
+                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                     true,
+                                     &rotary);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);
@@ -84,12 +92,10 @@ int main() {
       readTime = make_timeout_time_ms(TIME_READ);
     }
     // Get the movement of the rotary encoder
-    if (rotaryEncoder)
-    {
-      rotaryState.rotationValue = checkRotaryEncoder();
+    if (rotaryEncoder) {
+      rotaryState.rotationValue = checkRotaryEncoder(clk, dt);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }
- 
   }
 }
 
@@ -125,7 +131,7 @@ void handleEncoder(State* rotaryState) {
 
   const stateTable rotaryStateTable = {
 {
-    //Initial Rotation CW   Rotatation CCW
+    // Initial Rotation CW   Rotatation CCW
        {0,        1,           3},
        {0,        2,           0},
        {0,        3,           1},
@@ -136,7 +142,7 @@ void handleEncoder(State* rotaryState) {
    &handleLightThreshold,
    &handleExitSetup}
   };
-                          
+
   if (rotaryState->rotationValue == 1) direction = CW;
   else if (rotaryState->rotationValue == -1) direction = CCW;
   else direction = 0;
