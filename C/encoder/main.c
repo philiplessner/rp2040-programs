@@ -23,6 +23,7 @@ typedef struct {
     int8_t  rotationValue;
     uint16_t potValue;
   } State;
+
 const char msg[4][20] = {
                            "LED Intensity",
                            "LED On Time",
@@ -30,7 +31,6 @@ const char msg[4][20] = {
                            "Exit Setup"
                           };
 
-void rotaryInit(const uint, const uint, const uint);
 void handleEncoder(State*);
 void handleLEDOnTime();
 void handleLEDIntensity();
@@ -39,12 +39,12 @@ void handleExitSetup();
 
 int main() {
   State rotaryState = {0, 0, 0};
-  const uint clk = 16;
-  const uint dt = 17;
-  const uint sw = 18;
+  RotaryEncoder encoder = {.clk = 16,
+                            .dt = 17,
+                            .sw = 18};
 
   stdio_init_all();
-  rotaryInit(clk, dt, sw);
+  rotaryInit(&encoder);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);
@@ -75,30 +75,10 @@ int main() {
     }
     // Get the movement of the rotary encoder
     if (rotaryFlag) {
-      rotaryState.rotationValue = checkRotaryEncoder(clk, dt);
+      rotaryState.rotationValue = checkRotaryEncoder(&encoder);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }
   }
-}
-
-void rotaryInit(const uint clk, const uint dt, const uint sw) {
-  gpio_init(clk);
-  gpio_init(dt);
-  gpio_init(sw);
-  gpio_set_dir(clk, INPUT);
-  gpio_set_dir(dt, INPUT);
-  gpio_set_dir(sw, INPUT);
-  gpio_pull_up(sw);
-  gpio_pull_up(clk);
-  gpio_pull_up(dt);
-  gpio_set_irq_enabled_with_callback(clk,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
-  gpio_set_irq_enabled_with_callback(dt,
-                                     GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
-                                     true,
-                                     &rotary);
 }
 
 void handleLEDOnTime() {
