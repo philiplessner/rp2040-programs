@@ -44,7 +44,7 @@ int main() {
   RotaryEncoder encoder;
 
   stdio_init_all();
-  rotaryInit(&encoder, ROTARY_CLK, ROTARY_DT, ROTARY_SW);
+  RotaryEncoder_init(&encoder, ROTARY_CLK, ROTARY_DT, ROTARY_SW);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);
@@ -75,7 +75,7 @@ int main() {
     }
     // Get the movement of the rotary encoder
     if (rotaryFlag) {
-      rotaryState.rotationValue = checkRotaryEncoder(&encoder);
+      rotaryState.rotationValue = RotaryEncoder_read(&encoder);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }
   }

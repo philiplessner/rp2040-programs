@@ -10,7 +10,7 @@
             "visibility": "hidden"
         },
         "build": {
-            "visibility": "hidden"
+            "visibility": "icon"
         },
         "buildTarget": {
             "visibility": "hidden"
