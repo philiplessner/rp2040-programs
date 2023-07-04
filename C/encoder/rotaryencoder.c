@@ -1,10 +1,14 @@
+#include <string.h>
 #include "pico/stdlib.h"
 #include "./rotaryencoder.h"
 
+// Private variables and function
 // Flag from interrupt routine (moved=true)
-volatile bool rotaryFlag = false;
+static volatile bool rotaryFlag = false;
+static void RotaryEncoder_ISR(uint, uint32_t);
 
 void RotaryEncoder_init(RotaryEncoder* const self, uint clk, uint dt, uint sw) {
+    memset(self, 0, sizeof(*self));
     self->clk = clk;
     self->dt = dt;
     self->sw = sw;
@@ -20,16 +24,20 @@ void RotaryEncoder_init(RotaryEncoder* const self, uint clk, uint dt, uint sw) {
     gpio_set_irq_enabled_with_callback(self->clk,
                                         GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
                                         true,
-                                        &rotary);
+                                        &RotaryEncoder_ISR);
     gpio_set_irq_enabled_with_callback(self->dt,
                                         GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
                                         true,
-                                        &rotary);
+                                        &RotaryEncoder_ISR);
 }
 
 // Interrupt routine just sets a flag when rotation is detected
-void rotary(uint gpio, uint32_t event_mask) {
+static void RotaryEncoder_ISR(uint gpio, uint32_t event_mask) {
     rotaryFlag = true;
+}
+
+bool RotaryEncoder_getISRFlag() {
+    return rotaryFlag;
 }
 
 // Rotary encoder has moved (interrupt tells us) but what happened?

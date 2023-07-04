@@ -8,7 +8,8 @@ typedef struct {
     uint sw;
 } RotaryEncoder;
 
+// Public interface functions
 void RotaryEncoder_init(RotaryEncoder* const, uint, uint, uint);
-void rotary(uint, uint32_t);
 int8_t RotaryEncoder_read(RotaryEncoder* const);
+bool RotaryEncoder_getISRFlag();
 #endif  // ROTARYENCODER_H_

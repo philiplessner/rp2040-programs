@@ -16,8 +16,6 @@
 #define CW          1
 #define CCW         2
 
-extern volatile bool rotaryFlag;
-
 const uint32_t TIME_READ = 1000;
 const uint32_t BAUD_RATE = 100000;
 typedef struct {
@@ -74,7 +72,7 @@ int main() {
       readTime = make_timeout_time_ms(TIME_READ);
     }
     // Get the movement of the rotary encoder
-    if (rotaryFlag) {
+    if (RotaryEncoder_getISRFlag()) {
       rotaryState.rotationValue = RotaryEncoder_read(&encoder);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
     }
