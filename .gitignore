@@ -3,3 +3,4 @@ feather-build/
 *.uf2
 .DS_Store
 *.pyc
+wokwi.toml
