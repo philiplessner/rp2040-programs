@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "author": "Philip Lessner",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 143.8,
+      "left": 119.59,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": 230.35, "left": -7.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 108.93,
+      "left": -130.19,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 145.55,
+      "left": -92,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 95.47,
+      "left": -106.08,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 128.75,
+      "left": -73.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 97.67,
+      "left": 120.81,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.4", "led1:C", "black", [ "h-120.8", "v-3.37" ] ],
+    [ "led1:A", "r1:1", "blue", [ "v0" ] ],
+    [ "r1:2", "pico:GP12", "blue", [ "v0" ] ],
+    [ "logic1:GND", "pico:GND.4", "black", [ "h-37.53", "v-143.38" ] ],
+    [ "pico:GND.5", "btn1:2.l", "black", [ "h45.53", "v-4.26" ] ],
+    [ "btn1:1.l", "pico:GP18", "blue", [ "h-10.72", "v10.22" ] ],
+    [ "r2:2", "pico:GP10", "green", [ "v0" ] ],
+    [ "pico:GND.4", "led2:C", "black", [ "h-96.46", "v-4.26" ] ],
+    [ "led2:A", "r2:1", "green", [ "v-1.78", "h15.28" ] ],
+    [ "pico:GND.5", "btn2:2.l", "black", [ "h48.2", "v-50.26" ] ],
+    [ "btn2:1.l", "pico:GP19", "green", [ "h-31.28", "v45.02" ] ],
+    [ "logic1:D0", "pico:GP18", "blue", [ "h2.47", "v-27.25", "h103.33", "v-48", "h-22" ] ],
+    [ "logic1:D1", "pico:GP12", "blue", [ "h-11.53", "v-92.18", "h2.67" ] ],
+    [ "logic1:D2", "pico:GP19", "green", [ "h-21.53", "v-39.78", "h136", "v-69.33" ] ],
+    [ "logic1:D3", "pico:GP10", "green", [ "h-13.53", "v-133.38" ] ]
+  ],
+  "dependencies": {}
+}
