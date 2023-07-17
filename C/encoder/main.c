@@ -4,6 +4,7 @@
 #include "hardware/adc.h"
 #include "hardware/i2c.h"
 #include "./rotaryencoder.h"
+#include "./debounce.h"
 #include "./lcd.h"
 
 #define ROTARY_CLK  16
@@ -15,6 +16,7 @@
 #define NMENU       3
 #define CW          1
 #define CCW         2
+#define LED         12
 
 const uint32_t TIME_READ = 1000;
 const uint32_t BAUD_RATE = 100000;
@@ -40,9 +42,14 @@ void handleExitSetup();
 int main() {
   State rotaryState = {0, 0, 0};
   RotaryEncoder encoder;
+  Debounce rotarySW;
 
   stdio_init_all();
   RotaryEncoder_init(&encoder, ROTARY_CLK, ROTARY_DT, ROTARY_SW);
+  debounce_init(&rotarySW, ROTARY_SW, 1U);
+  // LED Setup
+  gpio_set_function(LED, GPIO_FUNC_SIO);
+  gpio_set_dir(LED, true);
   // Potentiometer Setup
   adc_init();
   adc_gpio_init(POT_PIN);
@@ -75,6 +82,13 @@ int main() {
     if (RotaryEncoder_getISRFlag()) {
       rotaryState.rotationValue = RotaryEncoder_read(&encoder);
       if (rotaryState.rotationValue !=0) handleEncoder(&rotaryState);
+    }
+    if (debounce_getFlag(&rotarySW)) {
+        debounce_disableTimerISR(&rotarySW);
+        gpio_put(LED, true);
+        sleep_ms(500);
+        gpio_put(LED, false);
+        debounce_enableTimerISR(&rotarySW);
     }
   }
 }

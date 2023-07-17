@@ -17,6 +17,7 @@ add_executable(${PROJECT_NAME}
          main.c
          lcd.c
          rotaryencoder.c
+         debounce.c
         )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 0)
